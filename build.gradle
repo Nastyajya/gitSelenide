@@ -8,13 +8,13 @@ version = '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-compileTestJava {
-    options.encoding = 'UTF-8'
-}
+ compileTestJava {
+     options.encoding = 'UTF-8'
+ }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
-    testImplementation(
+    implementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    implementation (
             "com.codeborne:selenide:6.15.0",
     )
 
