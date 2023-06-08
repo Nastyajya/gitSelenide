@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'guru.qa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+ compileTestJava {
+     options.encoding = 'UTF-8'
+ }
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    implementation (
+            "com.codeborne:selenide:6.15.0",
+    )
+
+}
+
+test {
+    useJUnitPlatform()
+}
