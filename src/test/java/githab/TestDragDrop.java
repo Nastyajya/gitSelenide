@@ -1,9 +1,6 @@
 package githab;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +29,7 @@ public class TestDragDrop {
     }
 
     @Test
-    void testActionc() {
+    void testActions() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         actions().clickAndHold($("#column-a")).moveToElement($("#column-b")).release().perform();
         $("#column-a").shouldHave(text("B"));
